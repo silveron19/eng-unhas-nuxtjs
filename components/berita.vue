@@ -27,7 +27,8 @@ export default {
         {
           id: 1,
           image: '_nuxt/images/gallery/image 1.jpg',
-          title: 'Title Title Title Title Title Title Title Titlte Title Title Title Title Title',
+          title:
+            'Title Title Title Title Title Title Title Titlte Title Title Title Title Title',
           subtitle:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum nisl nisi, sed lobortis nisi tincidunt et. Vivamus commodo, libero non eleifend aliquam, lacus augue vestibulum urna, nec lacinia diam arcu at dui. Vivamus dui justo, rhoncus quis magna ac, ullamcorper efficitur tortor. Mauris nec leo et urna feugiat vulputate. Nulla fringilla finibus posuere. Nulla facilisi. Donec lobortis mauris non interdum hendrerit.',
         },
@@ -76,7 +77,8 @@ export default {
         {
           id: 8,
           image: '_nuxt/images/gallery/image 3.jpg',
-          title: 'Title Title TitleTitle Title Title Title Title Title Title Title Title ',
+          title:
+            'Title Title TitleTitle Title Title Title Title Title Title Title Title ',
           subtitle:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum nisl nisi, sed lobortis nisi tincidunt et. Vivamus commodo, libero non eleifend aliquam, lacus augue vestibulum urna, nec lacinia diam arcu at dui. Vivamus dui justo, rhoncus quis magna ac, ullamcorper efficitur tortor. Mauris nec leo et urna feugiat vulputate. Nulla fringilla finibus posuere. Nulla facilisi. Donec lobortis mauris non interdum hendrerit.',
         },
@@ -146,7 +148,8 @@ export default {
       <div class="w-full sm:w-1/3 flex justify-center">
         <img
           class="w-2/3 md:w-full lg:w-7/8"
-          src="../images/berita/news 1.png" alt="" />
+          src="../images/berita/news 1.png"
+          alt="" />
       </div>
       <div class="md:w-1/2">
         <div class="flex flex-row items-center">
@@ -199,7 +202,8 @@ export default {
         <div class="w-1/3 mr-2 flex">
           <img
             class="w-full h-128 object-cover flex-1"
-            :src="slides[i].image" alt="" />
+            :src="slides[i].image"
+            alt="" />
         </div>
         <div class="w-2/3">
           <h2 class="text-md text-black font-bold">{{ slides[i].title }}</h2>
