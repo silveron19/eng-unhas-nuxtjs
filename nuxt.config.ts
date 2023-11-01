@@ -13,8 +13,8 @@ export default {
   },
   css: ['~/assets/css/main.css'],
   modules: [
-    ['@nuxtjs/tailwindcss'],
-    ['nuxt-icon'],
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon',
     [
       '@nuxtjs/google-fonts',
       {

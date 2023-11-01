@@ -148,3 +148,35 @@ export default {
   transition: opacity 0.5s ease;
 }
 </style>
+
+<!-- @media (min-width: 1440px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 1281px) {
+  html {
+    font-size: 90%;
+  }
+
+  #nav-drop {
+    justify-content: center !important;
+  }
+}
+@media (max-width: 1025px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+@media (max-width: 769px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 641px) {
+  html {
+    font-size: 60%;
+  }
+} -->
