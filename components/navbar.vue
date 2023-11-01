@@ -1,22 +1,16 @@
 <template>
-  <nav id="navbar" class="flex absolute px-28 pt-6 w-full">
-    <ul class="flex items-center w-full">
-      <li class="w-96 h-20" v-if="isSticky">
+  <nav id="navbar" class="flex absolute items-center px-14 md:px-28 w-full">
+    <ul class="flex justify-between lg:justify-center items-center w-full">
+      <li v-if="isSticky" class="w-48 h-full flex items-center md:w-96">
         <a id="logo-img" href="/"
           ><img src="../assets/images/logo.png" alt="" />
         </a>
       </li>
-      <div class="flex justify-center w-full">
+      <div v-if="isMediumSize" v-bind:style="[!isSticky ?{'padding-top': '1rem'}: {'padding-top': '0'} ]" class="flex justify-evenly w-full">
         <li v-for="(item, index) in navbarItems" :key="index">
           <a
-            class="flex text-lg hover:text-[#FDCB2C] pb-4 font-bold"
-            :class="{
-              'pr-0': isSticky && index === 0,
-              'pr-0': index === navbarItems.length - 1 || isSticky,
-              'px-10': isSticky && index !== 0,
-              'px-10': index !== 0,
-              'pr-10': !isSticky && index === 0,
-            }"
+            class="flex md:text-xs lg:text-sm xl:text-base hover:text-[#FDCB2C] font-bold"
+            
             :href="item.href"
             @mouseover="showDropdown_nav(index)"
             @mouseleave="hideDropdown_nav(index)"
@@ -24,7 +18,7 @@
           </a>
           <ul
             v-if="dropdown_v === index"
-            class="absolute bg-black shadow-md pl-3 w-56 z-10"
+            class="absolute bg-black shadow-md mt-4 pl-3 w-56 z-10"
             :class="{
               'translate-x-[2.5rem]': index !== 0,
               'translate-x-10': isSticky && index !== 0,
@@ -43,10 +37,12 @@
           </ul>
         </li>
       </div>
-      <li class="hidden">
-        <Icon name="ci:hamburger" class="w-6 h-6" />
-      </li>
-      <li class="h-14" v-if="isSticky">
+      <div v-else v-if="isSticky">
+        <li>
+          <Icon name="ci:hamburger" class=" h-[32px] w-[32px] md:w-[64px] md:h-[64px]" />
+        </li>
+      </div>
+      <li v-if="isSticky && isMediumSize">
         <Language />
       </li>
     </ul>
@@ -60,9 +56,11 @@
 </template>
 
 <script>
+// import {Slide} from 'vue3-burger-menu';
 export default {
   data() {
     return {
+      isMediumSize: this.checkScreenSize,
       navbarItems: [
         {
           title: 'Profil',
@@ -144,13 +142,13 @@ export default {
     };
   },
   mounted() {
+    window.addEventListener('resize', this.checkScreenSize);
     const navbar = document.getElementById('navbar');
     const sticky = navbar.offsetTop;
 
     const scrollCallback = () => {
       if (window.scrollY >= sticky) {
         navbar.classList.add('sticky');
-
         this.isSticky = true;
       } else {
         navbar.classList.remove('sticky');
@@ -162,6 +160,10 @@ export default {
     scrollCallback();
   },
   methods: {
+    checkScreenSize() {
+      this.isMediumSize = window.innerWidth >= 1024
+      return window.innerWidth >= 768;
+    },
     showDropdown_nav(index) {
       clearTimeout(this.timers[index]);
       this.dropdown_v = index;
@@ -195,9 +197,5 @@ export default {
   transition: opacity 0.5s ease;
 }
 
-@media (max-width: 640px) {
-  #navbar {
-    flex-direction: column;
-  }
-}
+
 </style>
