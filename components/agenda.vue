@@ -29,7 +29,7 @@ export default {
 <template>
   <div
     id="agenda"
-    class="bg-white px-14 md:px-28 py-8 justify-center align-center">
+    class="bg-white px-10 md:px-14 lg:px-16 xl:px-24 py-8 justify-center align-center">
     <div class="flex flex-row mb-10 justify-between items-center">
       <div class="w-1/2 flex flex-row items-center">
         <h1

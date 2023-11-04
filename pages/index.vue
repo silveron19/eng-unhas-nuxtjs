@@ -1,5 +1,7 @@
 <template>
-  <Berita />
+  <Welcome />
+  <Objective />
   <Gallery />
+  <Berita />
   <Agenda />
 </template>
