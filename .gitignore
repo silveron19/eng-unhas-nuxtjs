@@ -25,4 +25,4 @@ logs
 
 tsconfig.json
 tailwind.config.json
-yarn.lock
+*.lock

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-center items-center w-[100vw] min-h-[140vh] md:min-h-[100vh] relative">
+    class="flex justify-center items-center w-full min-h-[140vh] md:min-h-[100vh] relative">
     <div
       class="flex w-[80%] bg-[#063E63] z-[2] flex-col md:flex-row md:w-[90%]"
       :class="{ 'animate-fly-in': inViewport }">

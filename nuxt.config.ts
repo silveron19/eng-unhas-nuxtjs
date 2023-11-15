@@ -15,6 +15,7 @@ export default {
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
+    'nuxt-directus',
     [
       '@nuxtjs/google-fonts',
       {
