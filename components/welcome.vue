@@ -26,7 +26,7 @@
         </a>
       </div>
       <div class="flex justify-center md:items-start md:justify-end md:w-1/3">
-        <img src="../images/Rektor.png" class="md:w-[80%] md:shrink-0" />
+        <img src="../images/Rektor.png" class="md:w-[80%] md:shrink-0" alt="" />
       </div>
     </div>
     <div

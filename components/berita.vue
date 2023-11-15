@@ -21,23 +21,24 @@ export default {
     },
     fetchEvents() {
       $fetch('http://localhost:8055/items/berita', {
-        mode: "no-cors",
-        method: "GET"
+        mode: 'no-cors',
+        method: 'GET',
       })
-        .then(response => {
+        .then((response) => {
           if (!response.ok) {
-            throw new Error(`Network response was not ok. Status: ${response.status} - ${response.statusText}`);
+            throw new Error(
+              `Network response was not ok. Status: ${response.status} - ${response.statusText}`
+            );
           }
           return response.json();
         })
-        .then(data => {
+        .then((data) => {
           this.events = data.data; // Assuming the data is in the 'data' field
         })
-        .catch(error => {
+        .catch((error) => {
           console.error('Error fetching events:', error);
         });
-
-    }
+    },
   },
 
   data() {
@@ -129,7 +130,6 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-
   .carousel__prev,
   .carousel__next {
     margin: 0;
@@ -141,17 +141,20 @@ export default {
 </style>
 
 <template>
-  <<<<<<< Updated upstream <div id="berita"
+  <div
+    id="berita"
     class="bg-gray-200 px-10 md:px-14 lg:px-16 xl:px-24 py-8 justify-center align-center">
-    =======
-    <div id="berita" class="bg-gray-200 px-14 md:px-28 py-8 justify-center align-center">
-      >>>>>>> Stashed changes
+    <div
+      id="berita"
+      class="bg-gray-200 px-14 md:px-28 py-8 justify-center align-center">
       <div class="flex flex-row mb-10 justify-between">
         <div class="w-1/2 flex flex-row items-center">
-          <h1 class="text-black text-lg md:text-xl lg:text-3xl font-bold align-middle">
+          <h1
+            class="text-black text-lg md:text-xl lg:text-3xl font-bold align-middle">
             BERITA
           </h1>
-          <div class="ml-4 h-[4px] w-[75px] md:w-[250px] lg:w-[350px] xl:w-[400px] bg-yellow-600"></div>
+          <div
+            class="ml-4 h-[4px] w-[75px] md:w-[250px] lg:w-[350px] xl:w-[400px] bg-yellow-600"></div>
         </div>
         <div class="more_button items-center p-2">
           <div class="flex items-center m-1 justify-between">
@@ -167,34 +170,47 @@ export default {
       </div>
       <div class="flex flex-col md:flex-row gap-8 mb-8 md:mb-16">
         <div class="w-full sm:w-1/3 flex justify-center">
-          <img class="w-2/3 md:w-full lg:w-7/8" src="../images/berita/news 1.png" alt="" />
+          <img
+            class="w-2/3 md:w-full lg:w-7/8"
+            src="../images/berita/news 1.png"
+            alt="" />
         </div>
         <div class="md:w-1/2">
           <div class="flex flex-row items-center">
             <Icon name="mdi:calendar" color="#063E63" />
             <p class="text-[#063E63] text-sm sm:text-base">13 Oktober 2023</p>
           </div>
-          <h1 class="text-base md:text-lg lg:text-2xl text-black font-semibold my-2 md:my-6">
+          <h1
+            class="text-base md:text-lg lg:text-2xl text-black font-semibold my-2 md:my-6">
             Fakultas Teknik Sukses Gelar Konferensi Internasional ICREST 2023
           </h1>
           <p class="text-gray-500 text-xs sm:text-sm md:text-base line-clamp-4">
             International Conference On Research In Engineering and Science
-            Technology 2023 yang pertama sukses dilaksanakan oleh Fakultas Teknik
-            Universitas Hasanuddin. Bertema Advanced Technologies to Fulfill SDGs
-            For Suistainable Life, konferensi internasional ini digelar pada
-            Selasa, 10 Oktober 2023 di Gedung CSA LT1 Fakultas Teknik Universitas
-            Hasanuddin, Gowa.
+            Technology 2023 yang pertama sukses dilaksanakan oleh Fakultas
+            Teknik Universitas Hasanuddin. Bertema Advanced Technologies to
+            Fulfill SDGs For Suistainable Life, konferensi internasional ini
+            digelar pada Selasa, 10 Oktober 2023 di Gedung CSA LT1 Fakultas
+            Teknik Universitas Hasanuddin, Gowa.
           </p>
         </div>
       </div>
-      <carousel v-if="isMediumSize" :wrap-around="true" :items-to-show="3" :items-to-scroll="1">
+      <carousel
+        v-if="isMediumSize"
+        :wrap-around="true"
+        :items-to-show="3"
+        :items-to-scroll="1">
         <slide v-for="slide in slides" :key="slide.id">
           <div class="flex flex-col w-full h-full">
-            <img :src="slide.image" class="object-cover h-[100px] md:h-[120px] lg:h-[200px]" alt="Slide {{ slide.id }}" />
-            <p class="text-black text-sm md:text-base lg:text-lg font-bold text-justify mt-2 line-clamp-1">
+            <img
+              :src="slide.image"
+              class="object-cover h-[100px] md:h-[120px] lg:h-[200px]"
+              alt="Slide {{ slide.id }}" />
+            <p
+              class="text-black text-sm md:text-base lg:text-lg font-bold text-justify mt-2 line-clamp-1">
               {{ slide.title }}
             </p>
-            <p class="text-black text-xs md:text-sm font-light line-clamp-4 text-justify mt-2">
+            <p
+              class="text-black text-xs md:text-sm font-light line-clamp-4 text-justify mt-2">
               {{ slide.subtitle }}
             </p>
           </div>
@@ -204,10 +220,14 @@ export default {
         </template>
       </carousel>
       <div v-else>
-        <div v-for="i in 3"
+        <div
+          v-for="i in 3"
           class="overflow-hidden object-cover h-24 flex flex-row p-2 my-2 border-2 border-black rounded-lg">
           <div class="w-1/3 mr-2 flex">
-            <img class="w-full h-128 object-cover flex-1" :src="slides[i].image" alt="" />
+            <img
+              class="w-full h-128 object-cover flex-1"
+              :src="slides[i].image"
+              alt="" />
           </div>
           <div class="w-2/3">
             <h2 class="text-md text-black font-bold">{{ slides[i].title }}</h2>
@@ -218,4 +238,5 @@ export default {
         </div>
       </div>
     </div>
+  </div>
 </template>
