@@ -1,8 +1,15 @@
+<script>
+export default {
+  data() {
+
+  }
+}
+</script>
 <template>
   <div>
     <Header />
     <Navbar />
-    <slot />
+    <NuxtPage />
     <Footer />
   </div>
 </template>

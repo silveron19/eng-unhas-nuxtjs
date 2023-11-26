@@ -1,7 +1,9 @@
 <template>
-  <Welcome />
-  <Objective />
-  <Gallery />
-  <Berita />
-  <Agenda />
+  <Profile />
+  <Akademik />
+  <SumberDaya />
+  <KemahasiswaanMahasiswa />
+  <Penelitian />
+  <Kemitraan />
+  <Organisasi />
 </template>

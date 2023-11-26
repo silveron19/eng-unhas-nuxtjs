@@ -1,51 +1,31 @@
 <template>
-  <nav
-    id="navbar"
-    class="flex absolute items-center px-10 md:px-14 lg:px-16 xl:px-24 w-full"
+  <nav id="navbar" class="flex absolute items-center px-10 md:px-14 lg:px-16 xl:px-24 w-full"
     :class="{ '!px-2 md:!px-4 lg:!px-6 xl:!px-24': isSticky }">
     <ul class="flex justify-between lg:justify-center items-center w-full">
       <li v-if="isSticky" class="w-48 h-full flex items-center md:w-80">
-        <a id="logo-img" href="/"
-          ><img src="../assets/images/logo.png" alt="" />
+        <a id="logo-img" href="/"><img src="../assets/images/logo.png" alt="" />
         </a>
       </li>
-      <div
-        v-if="isMediumSize"
-        v-bind:style="[
-          !isSticky ? { 'padding-top': '1rem' } : { 'padding-top': '0' },
-        ]"
-        class="flex text-lg justify-end w-full"
-        :class="{ 'justify-center': isSticky }">
+      <div v-if="isMediumSize" v-bind:style="[
+        !isSticky ? { 'padding-top': '1rem' } : { 'padding-top': '0' },
+      ]" class="flex text-lg justify-center w-full" :class="{ 'justify-center': isSticky }">
         <li v-for="(item, index) in navbarItems" :key="index">
-          <a
-            class="flex text-sm md:text-base lg:text-lg hover:text-[#FDCB2C] font-bold"
-            :class="{
-              'pr-10 lg:pr-6 xl:pr-8': index === 0,
-              '!pl-0': index === 0 && isSticky,
-              '!px-2 md:!px-2.5 xl:!px-5 xl:!text-lg md:!text-base': isSticky,
-              '!pr-0': index === navbarItems.length - 1,
-              'px-10 lg:px-6 xl:px-8': index !== 0,
-            }"
-            :href="item.href"
-            @mouseover="showDropdown_nav(index)"
-            @mouseleave="hideDropdown_nav(index)"
-            >{{ item.title }}
+          <a class="flex text-sm md:text-base lg:text-lg hover:text-[#FDCB2C] font-bold" :class="{
+            'pr-10 lg:pr-6 xl:pr-8': index === 0,
+            '!pl-0': index === 0 && isSticky,
+            '!px-2 md:!px-2.5 xl:!px-5 xl:!text-lg md:!text-base': isSticky,
+            '!pr-0': index === navbarItems.length - 1,
+            'px-10 lg:px-6 xl:px-8': index !== 0,
+          }" :href="item.href" @mouseover="showDropdown_nav(index)" @mouseleave="hideDropdown_nav(index)">{{
+  item.title }}
           </a>
-          <ul
-            v-if="dropdown_v === index"
-            class="absolute bg-black shadow-md mt-4 pl-3 w-56 z-10"
-            :class="{
-              '!translate-x-10 max-lg:!translate-x-6 max-xl:!translate-x-8':
-                index !== 0,
-              '!translate-x-3': isSticky && index !== 0,
-              '!w-44': index === navbarItems.length - 1,
-            }"
-            @mouseover="showDropdown_nav(index)"
-            @mouseleave="hideDropdown_nav(index)">
-            <li
-              v-for="(subItem, subIndex) in item.subItems"
-              :key="subIndex"
-              class="py-2">
+          <ul v-if="dropdown_v === index" class="absolute bg-black shadow-md mt-4 pl-3 w-56 z-10" :class="{
+            '!translate-x-10 max-lg:!translate-x-6 max-xl:!translate-x-8':
+              index !== 0,
+            '!translate-x-3': isSticky && index !== 0,
+            '!w-44': index === navbarItems.length - 1,
+          }" @mouseover="showDropdown_nav(index)" @mouseleave="hideDropdown_nav(index)">
+            <li v-for="(subItem, subIndex) in item.subItems" :key="subIndex" class="py-2">
               <a class="block hover:text-[#FDCB2C]" :href="subItem.href">{{
                 subItem.title
               }}</a>
@@ -56,9 +36,7 @@
       </div>
       <div v-else v-if="isSticky">
         <li>
-          <Icon
-            name="ci:hamburger"
-            class="h-[32px] w-[32px] md:w-[64px] md:h-[64px]" />
+          <Icon name="ci:hamburger" class="h-[32px] w-[32px] md:w-[64px] md:h-[64px]" />
         </li>
       </div>
       <li v-if="isSticky && isMediumSize">
@@ -66,18 +44,10 @@
       </li>
     </ul>
   </nav>
-  <div
-    id="background"
+  <div id="background"
     class="flex bg-[url('/assets/images/eng-unhasv1.svg')] bg-cover bg-center min-h-[85vh] justify-center items-center bg-no-repeat w-full">
-    <a
-      class="flex justify-center items-center w-full"
-      id="logo-original"
-      href="/"
-      v-if="!isSticky"
-      ><img
-        class="max-md:w-3/5 max-sm:w-1/2"
-        src="../assets/images/logo.png"
-        alt="" />
+    <a class="flex justify-center items-center w-full" id="logo-original" href="/" v-if="!isSticky"><img
+        class="max-md:w-3/5 max-sm:w-1/2" src="../assets/images/logo.png" alt="" />
     </a>
   </div>
 </template>
@@ -113,7 +83,7 @@ export default {
         },
         {
           title: 'Sumber daya',
-          href: '/sumber-daya',
+          href: '/sumber_daya',
           subItems: [
             { title: 'Guru Besar', href: '/guru' },
             { title: 'Tenaga Pendidikan', href: '/tenaga' },
@@ -136,7 +106,7 @@ export default {
         },
         {
           title: 'Penelitian',
-          href: '/oenelitian',
+          href: '/penelitian',
           subItems: [
             { title: 'Daftar Penelitian', href: '/penelitian' },
             { title: 'Hasil Inovasi', href: '/inovasi' },
@@ -219,6 +189,7 @@ export default {
 #logo-original {
   transition: opacity 0.5s ease;
 }
+
 #logo-img {
   transition: opacity 0.5s ease;
 }

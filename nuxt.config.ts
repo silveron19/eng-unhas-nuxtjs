@@ -32,14 +32,10 @@ export default {
   },
   css: ["~/assets/css/main.css"],
   modules: [
-<<<<<<< Updated upstream
-    '@nuxtjs/tailwindcss',
-    'nuxt-icon',
-    'nuxt-directus',
-=======
     "@nuxtjs/tailwindcss",
     "nuxt-icon",
->>>>>>> Stashed changes
+    "nuxt-directus",
+
     [
       "@nuxtjs/google-fonts",
       {
