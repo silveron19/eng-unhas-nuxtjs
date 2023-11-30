@@ -1,21 +1,7 @@
 export default {
   routeRules: {
-    "/testing": {
-      proxy: { to: "https://www.google.com/?hl=ID" },
-    },
-    "/berita": {
-      proxy: { to: "http://localhost:8055/items/berita" },
-    },
-    "/events": {
-      proxy: { to: "http://localhost:8055/items/events" },
-    },
-    "/galeri": {
-      proxy: { to: "http://localhost:8055/items/galeri" },
-    },
-    "/test": {
-      proxy: {
-        to: "http://localhost:8055/assets",
-      },
+    "data/sejarah": {
+      proxy: { to: "http://localhost:8055/items/Sejarah" },
     },
   },
   head: {

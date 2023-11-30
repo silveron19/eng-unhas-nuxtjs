@@ -85,10 +85,10 @@ export default {
           title: 'Sumber daya',
           href: '/sumber_daya/sumber_daya',
           subItems: [
-            { title: 'Guru Besar', href: '/sumber_day/guru' },
-            { title: 'Tenaga Pendidikan', href: '/sumber_day/tenaga' },
-            { title: 'Sarana dan Prasana', href: '/sumber_day/sarana' },
-            { title: 'Perpustakaan', href: '/sumber_day/perpustakaan' },
+            { title: 'Guru Besar', href: '/sumber_daya/guru' },
+            { title: 'Tenaga Pendidikan', href: '/sumber_daya/tenaga' },
+            { title: 'Sarana dan Prasana', href: '/sumber_daya/sarana' },
+            { title: 'Perpustakaan', href: '/sumber_daya/perpustakaan' },
           ],
         },
         {

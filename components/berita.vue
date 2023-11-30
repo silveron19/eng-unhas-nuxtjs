@@ -13,32 +13,32 @@ export default {
 
   mounted() {
     window.addEventListener('resize', this.checkScreenSize);
-    this.fetchEvents();
+    // this.fetchEvents();
   },
   methods: {
     checkScreenSize() {
       return window.innerWidth >= 768;
     },
-    fetchEvents() {
+    // fetchEvents() {
 
-      fetch('http://localhost:3000/berita')
-        .then(response => {
-          console.log(response)
-          if (!response.ok) {
-            throw new Error(
-              `Network response was not ok. Status: ${response.status} - ${response.statusText}`
-            );
-          }
-          return response.json();
-        })
-        .then((data) => {
-          this.events = data.data; // Assuming the data is in the 'data' field
+    //   fetch('http://localhost:3000/berita')
+    //     .then(response => {
+    //       console.log(response)
+    //       if (!response.ok) {
+    //         throw new Error(
+    //           `Network response was not ok. Status: ${response.status} - ${response.statusText}`
+    //         );
+    //       }
+    //       return response.json();
+    //     })
+    //     .then((data) => {
+    //       this.events = data.data; // Assuming the data is in the 'data' field
 
-        })
-        .catch((error) => {
-          console.error('Error fetching events:', error);
-        });
-    },
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error fetching events:', error);
+    //     });
+    // },
   },
 
   data() {
