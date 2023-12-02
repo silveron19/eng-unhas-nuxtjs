@@ -13,9 +13,9 @@ export default {
   },
   css: ['~/assets/css/main.css'],
   modules: [
-    '@nuxtjs/tailwindcss',
-    'nuxt-icon',
-    'nuxt-directus',
+    ['@nuxtjs/tailwindcss'],
+    ['nuxt-icon'],
+    ['nuxt-directus'],
     [
       '@nuxtjs/google-fonts',
       {
@@ -30,4 +30,9 @@ export default {
       },
     ],
   ],
+  runtimeConfig: {
+    directus: {
+      url: 'http://localhost:8055',
+    },
+  },
 };

@@ -33,12 +33,12 @@
           </a>
           <ul
             v-if="dropdown_v === index"
-            class="absolute bg-black shadow-md mt-4 pl-3 w-56 z-10"
+            class="absolute bg-black shadow-md mt-4 pl-3 w-64 z-10"
             :class="{
               '!translate-x-10 max-lg:!translate-x-6 max-xl:!translate-x-8':
                 index !== 0,
               '!translate-x-3': isSticky && index !== 0,
-              '!w-44': index === navbarItems.length - 1,
+              '!w-[10.9rem]': index === navbarItems.length - 1,
             }"
             @mouseover="showDropdown_nav(index)"
             @mouseleave="hideDropdown_nav(index)">
