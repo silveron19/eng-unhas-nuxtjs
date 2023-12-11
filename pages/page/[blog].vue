@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-400"
+    class="dynamicPage text-[#000] items-center px-10 md:px-14 lg:px-16 xl:px-24 w-full"
     v-html="page ? page.data[0].content : 'Loading...'"></div>
 
   <!-- <div
@@ -17,6 +17,7 @@ const route = useRoute();
 
 onMounted(async () => {
   try {
+    console.log(route);
     const response = await fetch(
       `http://localhost:8055/items/Pages?filter[slug]=${route.params.blog}`
     );
