@@ -16,7 +16,10 @@
         ]"
         class="flex text-lg justify-end w-full"
         :class="{ 'justify-center': isSticky }">
-        <li v-for="(item, index) in navbarItems" :key="index">
+        <li
+          v-for="(item, index) in navbarItems"
+          :key="index"
+          :to="{ name: 'DynamicPage', params: { slug: item.subItems.href } }">
           <a
             class="flex text-sm md:text-base lg:text-lg hover:text-[#FDCB2C] font-bold"
             :class="{
@@ -90,75 +93,87 @@ export default {
       navbarItems: [
         {
           title: 'Profil',
-          href: '/profile',
           subItems: [
-            { title: 'Sejarah', href: '/sejarah' },
-            { title: 'Manajemen', href: '/manajemen' },
-            { title: 'Visi, Misi, dan Sasaran', href: '/visi' },
-            { title: 'Berita', href: '/berita' },
-            { title: 'Master Plan', href: '/plan' },
-            { title: 'Peta Kampus', href: '/peta' },
-            { title: 'Mediatek', href: '/mediatek' },
+            { title: 'Sejarah', href: '/page/sejarah' },
+            { title: 'Manajemen', href: '/page/manajemen' },
+            {
+              title: 'Visi, Misi, dan Sasaran',
+              href: '/page/visi-misi-sasaran-pendidikan',
+            },
+            { title: 'Berita', href: '/page/berita' },
+            { title: 'Struktur Organisasi', href: '/page/struktur-organisasi' },
+            { title: 'Master Plan', href: '/page/master-plan' },
+            { title: 'Peta Kampus', href: '/page/peta-kampus' },
+            { title: 'Mediatek', href: '/page/mediatek' },
           ],
         },
         {
           title: 'Akademik',
-          href: '/akademik',
           subItems: [
-            { title: 'Departemen', href: '/departemen' },
-            { title: 'Program Akademik', href: '/program' },
-            { title: 'Akreditasi', href: '/akreditasi' },
-            { title: 'Kalender Akademik', href: '/kalender' },
+            { title: 'Departemen', href: '/page/departemen' },
+            { title: 'Program Akademik', href: '/page/program-akademik' },
+            { title: 'Akreditasi', href: '/page/akreditasi' },
+            { title: 'Kalender Akademik', href: '/page/kalender-akademik' },
           ],
         },
         {
           title: 'Sumber daya',
-          href: '/sumber-daya',
           subItems: [
-            { title: 'Guru Besar', href: '/guru' },
-            { title: 'Tenaga Pendidikan', href: '/tenaga' },
-            { title: 'Sarana dan Prasana', href: '/sarana' },
-            { title: 'Perpustakaan', href: '/perpustakaan' },
+            { title: 'Guru Besar', href: '/page/guru-besar' },
+            { title: 'Tenaga Pendidikan', href: '/page/tenaga-pendidikan' },
+            { title: 'Sarana dan Prasana', href: '/page/sarana-prasarana' },
+            { title: 'Perpustakaan', href: '/page/perpustakaan' },
           ],
         },
         {
           title: 'Mahasiswa',
-          href: '/mahasiswa',
           subItems: [
-            { title: 'UPT Asrama (RAMTEK)', href: '/asmara' },
-            { title: 'Pengembangan Karakter', href: '/karakter' },
-            { title: 'Prestasi', href: '/prestasi' },
-            { title: 'Mahasiswa Inbound/Outbound', href: '/bound' },
-            { title: 'Alumni', href: '/alumni' },
-            { title: 'Aturan Kemahasiswaan', href: '/aturan' },
-            { title: 'Pengumuman', href: '/Pengumuman' },
+            { title: 'UPT Asrama (RAMTEK)', href: '/page/asrama' },
+            {
+              title: 'Pengembangan Karakter',
+              href: '/page/pengembangan-karakter-mahasiswa',
+            },
+            { title: 'Prestasi Mahasiswa', href: '/page/prestasi-mahasiswa' },
+            {
+              title: 'Mahasiswa Inbound/Outbound',
+              href: '/page/mahasiswa-inbound-outbound',
+            },
+            { title: 'Alumni', href: '/page/alumni' },
+            {
+              title: 'Aturan Kemahasiswaan',
+              href: '/page/aturan-kemahasiswaan',
+            },
+            { title: 'Pengumuman', href: '/page/Pengumuman' },
           ],
         },
         {
           title: 'Penelitian',
-          href: '/oenelitian',
           subItems: [
-            { title: 'Daftar Penelitian', href: '/penelitian' },
-            { title: 'Hasil Inovasi', href: '/inovasi' },
-            { title: 'Hak Kekayaan Intelektual', href: '/haki' },
+            { title: 'Daftar Penelitian', href: '/page/penelitian' },
+            { title: 'Hasil Inovasi', href: '/page/inovasi' },
+            { title: 'Hak Kekayaan Intelektual', href: '/page/haki' },
           ],
         },
         {
           title: 'Kemitraan',
-          href: '/kemitraan',
           subItems: [
-            { title: 'Kerjasama Dalam Negeri', href: '/luarnegeri' },
-            { title: 'Kerjasama luar Negeri', href: '/dalamnegeri' },
+            {
+              title: 'Kerjasama Dalam Negeri',
+              href: '/page/kerjasama-luar-negeri',
+            },
+            {
+              title: 'Kerjasama luar Negeri',
+              href: '/page/kerjasama-dalam-negeri',
+            },
           ],
         },
         {
           title: 'Organisasi',
-          href: '/organisasi',
           subItems: [
-            { title: 'K3', href: '/k3' },
-            { title: 'GPM-PR', href: '/gpm-pr' },
-            { title: 'COT', href: '/cot' },
-            { title: 'Dharma Wanita', href: '/dharmawanita' },
+            { title: 'K3', href: '/page/k3' },
+            { title: 'GPM-PR', href: '/page/gpm-pr' },
+            { title: 'COT', href: '/page/cot' },
+            { title: 'Dharma Wanita', href: '/page/dharmawanita' },
           ],
         },
       ],
