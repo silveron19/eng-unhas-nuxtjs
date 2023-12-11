@@ -143,7 +143,7 @@ export default {
               title: 'Aturan Kemahasiswaan',
               href: '/page/aturan-kemahasiswaan',
             },
-            { title: 'Pengumuman', href: '/page/Pengumuman' },
+            { title: 'Pengumuman', href: '/page/pengumuman' },
           ],
         },
         {
