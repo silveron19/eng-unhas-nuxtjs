@@ -21,4 +21,24 @@
   html {
     scroll-behavior: smooth;
   }
+
+  .dynamicPage a {
+    color: rgb(64, 64, 255);
+  }
+
+  .dynamicPage table {
+    text-align: center;
+  }
+
+  .dynamicPage td {
+    border-top: 1px solid #000;
+    padding: 1rem;
+  }
+
+  .dynamicPage ol li:not(ul li) {
+    list-style: decimal;
+  }
+
+
+
 }
