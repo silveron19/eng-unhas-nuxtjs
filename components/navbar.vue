@@ -173,7 +173,7 @@ export default {
             { title: 'K3', href: '/page/k3' },
             { title: 'GPM-PR', href: '/page/gpm-pr' },
             { title: 'COT', href: '/page/cot' },
-            { title: 'Dharma Wanita', href: '/page/dharmawanita' },
+            { title: 'Dharma Wanita', href: '/page/dharma-wanita' },
           ],
         },
       ],
