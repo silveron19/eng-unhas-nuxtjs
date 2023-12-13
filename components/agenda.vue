@@ -5,22 +5,7 @@ export default {
   data() {
     return {
       agendas: [
-        // {
-        //   title: 'International Guest Lecture on Journal Article',
-        //   location:
-        //     'Senat Meeting Room, COT Building, 2nd floor, Engineering Faculty of Universitas Hasanuddin',
-        //   duration: '25 Juni 2019 -  25 Juni 2019',
-        //   day: '25',
-        //   month: 'Jun',
-        // },
-        // {
-        //   title:
-        //     'Pengembangan Karakter Mahasiswa Baru 2019 Fakultas Teknik Unhas',
-        //   location: 'Asrama Mahasiswa Fakultas Teknik, Kampus Gowa',
-        //   duration: '22 Juni 2019 -  22 Juni 2019',
-        //   day: '22',
-        //   month: 'Jun',
-        // },
+        
       ],
     };
   },
@@ -31,9 +16,6 @@ export default {
         const res = await axios.get(ENDPOINT)
         this.agendas = res.data.data
         const newDate = new Date("2019-03-13T12:00:00")
-        console.log(newDate.getDay())
-        console.log(newDate.toDateString())
-        console.log(newDate.toDateString().split(" ")[2])
       } catch (e) {
         console.log(e)
       }
@@ -59,7 +41,7 @@ export default {
       </div>
       <div class="more_button items-center p-2">
         <div class="flex items-center m-1 justify-between">
-          <a href="#galeri">
+          <a href="#agenda">
             <p class="text-[#063E63] font-bold text-xs md:text-lg">
               LIHAT AGENDA LAINNYA
             </p>

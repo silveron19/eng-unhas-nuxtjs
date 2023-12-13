@@ -26,6 +26,10 @@
     color: rgb(64, 64, 255);
   }
 
+  .dynamicPage div {
+    color: rgb(64, 64, 255);
+  }
+
   .dynamicPage table {
     text-align: center;
   }
@@ -35,8 +39,13 @@
     padding: 1rem;
   }
 
+  .dynamicPage tbody tr td:has(strong), .dynamicPage th {
+    background-color: #fdcb2c;
+  }
+
   .dynamicPage ol li:not(ul li) {
     list-style: decimal;
+    margin-left: 1rem;
   }
 
   .dynamicPage p img {
@@ -64,80 +73,84 @@
 
   .dynamicPage ul li {
     list-style: disc;
+    margin-left: 1rem;
   }
 
-  .dynamicPage ol li ul li{
+  .dynamicPage ol li ul li {
     list-style: none;
   }
 
-  .dynamicPage p object{
+  .dynamicPage p object {
     width: 100%;
     height: 200vh;
     margin-top: 20px;
   }
 
-  .dynamicPage p iframe{
+  .dynamicPage p iframe {
     width: 100%;
     height: 40vw;
   }
-  
-  .dynamicPage h2{
+
+  .dynamicPage h2 {
     font-size: 36px;
     font-weight: bolder;
   }
 
-  .dynamicPage tr td p img{
+  .dynamicPage tr td p img {
     width: 30%;
     height: 30%;
   }
 
-  .dynamicPage tr td p{
+  .dynamicPage tr td p {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .dynamicPage tr td p strong{
+  .dynamicPage tr td p strong {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .dynamicPage tr td p strong img{
+  .dynamicPage tr td p strong img {
     width: 45%;
     height: 45%;
     margin-bottom: 20px;
   }
 
-  .dynamicPage section p{
+  .dynamicPage section p {
     font-size: 20px;
     text-align: center;
   }
 
-  .dynamicPage section p img{
+  .dynamicPage section p img {
     width: 100%;
   }
 
-  .dynamicPage section h3{
+  .dynamicPage section h3 {
     text-align: center;
     padding-top: 32px;
   }
 
-  .dynamicPage section table tbody tr h3{
+  .dynamicPage section table tbody tr h3 {
     font-size: 16px;
+    color: #000;
   }
 
-  .dynamicPage section table tbody tr h3 img{
+  .dynamicPage section table tbody tr h3 img {
     width: 100%;
   }
 
-  .dynamicPage section table colgroup col{
+  .dynamicPage section table colgroup col {
     width: 33%;
   }
 
-  .dynamicPage section a {
+  .dynamicPage section a,
+  .dynamicPage div p,
+  .dynamicPage div h3 {
     color: #000;
   }
 }

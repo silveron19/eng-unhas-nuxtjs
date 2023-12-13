@@ -71,7 +71,8 @@
   </nav>
   <div
     id="background"
-    class="flex bg-[url('/assets/images/eng-unhasv1.svg')] bg-cover bg-center min-h-[85vh] justify-center items-center bg-no-repeat w-full">
+    class="flex bg-[url('/assets/images/eng-unhasv1.svg')] bg-cover bg-center min-h-[85vh] justify-center items-center bg-no-repeat w-full"
+    :class="{ '!min-h-[30vh]': !isHomePage }">
     <a
       class="flex justify-center items-center w-full"
       id="logo-original"
@@ -80,7 +81,9 @@
       ><img
         class="max-md:w-3/5 max-sm:w-1/2"
         src="../assets/images/logo.png"
-        alt="" />
+        alt=""
+        :class="{ 'absolute left-24 top-[6.5rem] w-48 md:w-80': !isHomePage }"
+      />
     </a>
   </div>
 </template>
@@ -90,6 +93,7 @@ export default {
   data() {
     return {
       isMediumSize: this.checkScreenSize,
+      isHomePage: this.$route.path == '/',
       navbarItems: [
         {
           title: 'Profil',
@@ -186,7 +190,6 @@ export default {
     window.addEventListener('resize', this.checkScreenSize);
     const navbar = document.getElementById('navbar');
     const sticky = navbar.offsetTop;
-
     const scrollCallback = () => {
       if (window.scrollY >= sticky) {
         navbar.classList.add('sticky');

@@ -1,11 +1,7 @@
 <template>
   <div
-    class="dynamicPage text-[#000]  items-center px-10 md:px-28 py-10 lg:px-32 lg:py-10 xl:px-48 xl:20 w-full overflow-hidden"
+    class="dynamicPage text-[#000] items-center px-10 md:px-14 lg:px-16 xl:px-24 w-full overflow-hidden"
     v-html="page ? page.data[0].content : 'Loading...'"></div>
-
-  <!-- <div
-    class="bg-gray-400"
-    v-html="page ? page.data[0].user_created : 'Loading...'"></div> -->
 </template>
 
 <script setup>
