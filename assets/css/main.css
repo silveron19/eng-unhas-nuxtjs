@@ -39,6 +39,105 @@
     list-style: decimal;
   }
 
+  .dynamicPage p img {
+    justify-self: center;
+  }
 
+  .dynamicPage p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 
+  .dynamicPage p strong img {
+    width: 100%;
+  }
+
+  .dynamicPage ul {
+    margin-bottom: 10px;
+  }
+
+  .dynamicPage h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .dynamicPage ul li {
+    list-style: disc;
+  }
+
+  .dynamicPage ol li ul li{
+    list-style: none;
+  }
+
+  .dynamicPage p object{
+    width: 100%;
+    height: 200vh;
+    margin-top: 20px;
+  }
+
+  .dynamicPage p iframe{
+    width: 100%;
+    height: 40vw;
+  }
+  
+  .dynamicPage h2{
+    font-size: 36px;
+    font-weight: bolder;
+  }
+
+  .dynamicPage tr td p img{
+    width: 30%;
+    height: 30%;
+  }
+
+  .dynamicPage tr td p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dynamicPage tr td p strong{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dynamicPage tr td p strong img{
+    width: 45%;
+    height: 45%;
+    margin-bottom: 20px;
+  }
+
+  .dynamicPage section p{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .dynamicPage section p img{
+    width: 100%;
+  }
+
+  .dynamicPage section h3{
+    text-align: center;
+    padding-top: 32px;
+  }
+
+  .dynamicPage section table tbody tr h3{
+    font-size: 16px;
+  }
+
+  .dynamicPage section table tbody tr h3 img{
+    width: 100%;
+  }
+
+  .dynamicPage section table colgroup col{
+    width: 33%;
+  }
+
+  .dynamicPage section a {
+    color: #000;
+  }
 }

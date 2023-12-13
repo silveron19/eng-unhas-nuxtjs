@@ -30,7 +30,7 @@
       </div>
     </div>
     <div
-      class="absolute left-0 bottom-[7vh] w-[42vw] h-[17vh] bg-[#DF3F3F] z-[1] md:bottom-[14vh]"
+      class="absolute left-0 bottom-[5vh] w-[42vw] h-[17vh] bg-[#DF3F3F] z-[1] md:bottom-[14vh]"
       :class="{ 'animate-fly-in': inViewport }"></div>
     <div
       class="flex justify-center items-center absolute left-0 -top-24 bottom-[14vh] w-[60%] h-[30vh] bg-[#CDB646] z-[0] md:w-[42vw] md:h-[39vh] md:left-10"
@@ -51,6 +51,7 @@ export default {
   data() {
     return {
       inViewport: false,
+      observer: null,
     };
   },
   mounted() {
@@ -64,23 +65,22 @@ export default {
         threshold: 0.5,
       };
 
-      const observer = new IntersectionObserver(
+      this.observer = new IntersectionObserver(
         this.handleIntersection,
         options
       );
-      observer.observe(this.$el);
+      this.observer.observe(this.$el);
     },
     handleIntersection(entries) {
-      if (entries[0].isIntersecting) {
+      if (entries[0].isIntersecting && !this.inViewport) {
         this.inViewport = true;
-      } else {
-        this.inViewport = false;
+        this.observer.disconnect(); // Disconnect the observer after triggering the animation
       }
     },
   },
 };
-</script>
 
+</script>
 <style scoped>
 .animate-fly-in {
   animation: fly-in 1s ease-in-out both;

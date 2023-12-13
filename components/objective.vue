@@ -52,6 +52,7 @@ export default {
   data() {
     return {
       inViewport: false,
+      observer: null,
     };
   },
   mounted() {
@@ -65,23 +66,22 @@ export default {
         threshold: 0.5,
       };
 
-      const observer = new IntersectionObserver(
+      this.observer = new IntersectionObserver(
         this.handleIntersection,
         options
       );
-      observer.observe(this.$el);
+      this.observer.observe(this.$el);
     },
     handleIntersection(entries) {
-      if (entries[0].isIntersecting) {
+      if (entries[0].isIntersecting && !this.inViewport) {
         this.inViewport = true;
-      } else {
-        this.inViewport = false;
+        this.observer.disconnect(); // Disconnect the observer after triggering the animation
       }
     },
   },
 };
-</script>
 
+</script>
 <style scoped>
 .animate-fly-in {
   animation: fly-in 1s ease-in-out both;

@@ -143,7 +143,7 @@ export default {
               title: 'Aturan Kemahasiswaan',
               href: '/page/aturan-kemahasiswaan',
             },
-            { title: 'Pengumuman', href: '/page/Pengumuman' },
+            { title: 'Pengumuman', href: '/page/pengumuman' },
           ],
         },
         {
@@ -159,11 +159,11 @@ export default {
           subItems: [
             {
               title: 'Kerjasama Dalam Negeri',
-              href: '/page/kerjasama-luar-negeri',
+              href: '/page/kerjasama-dalam-negeri',
             },
             {
               title: 'Kerjasama luar Negeri',
-              href: '/page/kerjasama-dalam-negeri',
+              href: '/page/kerjasama-luar-negeri',
             },
           ],
         },
