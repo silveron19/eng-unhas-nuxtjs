@@ -43,7 +43,8 @@
     </div>
     <img
       src="../images/Motif.png"
-      class="absolute left-0 bottom-0 max-w-[40%] h-100" />
+      class="absolute left-0 bottom-0 max-w-[40%] h-100"
+      alt="" />
   </div>
 </template>
 
@@ -75,7 +76,7 @@ export default {
     handleIntersection(entries) {
       if (entries[0].isIntersecting && !this.inViewport) {
         this.inViewport = true;
-        this.observer.disconnect(); // Disconnect the observer after triggering the animation
+        this.observer.disconnect();
       }
     },
   },

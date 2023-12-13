@@ -42,7 +42,8 @@
     </div>
     <img
       src="../images/Motif2.png"
-      class="absolute right-0 top-0 max-w-[40vw] max-h-[40vh]" />
+      class="absolute right-0 top-0 max-w-[40vw] max-h-[40vh]"
+      alt="" />
   </div>
 </template>
 
@@ -74,7 +75,7 @@ export default {
     handleIntersection(entries) {
       if (entries[0].isIntersecting && !this.inViewport) {
         this.inViewport = true;
-        this.observer.disconnect(); // Disconnect the observer after triggering the animation
+        this.observer.disconnect();
       }
     },
   },
