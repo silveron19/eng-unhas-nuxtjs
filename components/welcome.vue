@@ -30,7 +30,7 @@
       </div>
     </div>
     <div
-      class="absolute left-0 bottom-[5vh] w-[42vw] h-[17vh] bg-[#DF3F3F] z-[1] md:bottom-[14vh]"
+      class="absolute left-0 bottom-[5vh] w-[24vw] h-[17vh] bg-[#DF3F3F] z-[1] md:bottom-[6vh]"
       :class="{ 'animate-fly-in': inViewport }"></div>
     <div
       class="flex justify-center items-center absolute left-0 -top-24 bottom-[14vh] w-[60%] h-[30vh] bg-[#CDB646] z-[0] md:w-[42vw] md:h-[39vh] md:left-10"

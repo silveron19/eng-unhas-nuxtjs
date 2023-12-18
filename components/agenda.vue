@@ -15,7 +15,6 @@ export default {
       try {
         const res = await axios.get(ENDPOINT)
         this.agendas = res.data.data
-        const newDate = new Date("2019-03-13T12:00:00")
       } catch (e) {
         console.log(e)
       }
@@ -54,7 +53,7 @@ export default {
     <div v-if="agendas.length == 0">
       <h1 class="text-black">LOADING</h1>
     </div>
-    <div v-else id="list_agenda" class="flex flex-col lg:flex-row gap-4">
+    <div v-else id="list_agenda" class="flex flex-col lg:flex-row gap-4 justify-evenly">
       <div v-for="agenda in agendas.slice(0, 2)"
         class="overflow-hidden border-2 h-[120px] md:h-[140px] lg:h-[160px] bg-white flex flex-row">
         <div class="bg-[#063E63] h-1/2 p-8 flex flex-col justify-center">

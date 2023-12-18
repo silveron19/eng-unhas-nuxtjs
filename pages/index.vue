@@ -2,6 +2,6 @@
   <Welcome />
   <Objective />
   <Gallery />
-  <Berita />
+  <Berita/>
   <Agenda />
 </template>

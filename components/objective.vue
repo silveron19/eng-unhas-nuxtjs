@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-[90vh] bg-[#efefef] pt-10 relative">
-    <div class="flex pl-[2rem] items-center md:pl-[12rem]">
+    <div class="flex items-center px-10 md:px-14 lg:px-16 xl:px-24">
       <div class="text-black text-[2.5rem] font-bold">Visi dan Misi</div>
       <div class="bg-[#CDB646] flex grow ml-10 h-2 mt-2"></div>
     </div>
