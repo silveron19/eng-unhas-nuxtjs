@@ -71,7 +71,7 @@
   </nav>
   <div
     id="background"
-    class="flex bg-[url('/assets/images/eng-unhasv1.svg')] bg-cover bg-center min-h-[85vh] justify-center items-center bg-no-repeat w-full"
+    class="flex bg-[url('/assets/images/eng-unhasv1.svg')] bg-cover bg-center min-h-[85vh] justify-center items-center bg-no-repeat w-full mb-12"
     :class="{ '!min-h-[30vh]': !isHomePage }">
     <a
       class="flex justify-center items-center w-full"
