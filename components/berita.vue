@@ -78,7 +78,7 @@ export default {
     <div v-else>
       <div
         id="berita"
-        class="bg-gray-200 px-14 md:px-28 py-8 justify-center align-center">
+        class="bg-gray-200 justify-center align-center">
         <div class="flex flex-row mb-10 justify-between">
           <div class="w-1/2 flex flex-row items-center">
             <h1
